@@ -14,11 +14,7 @@ MySQL
 
 Install:
 
-composer create-project symfony/skeleton your-project-name
-
-composer require overblog/graphql-bundle
-
-composer require --dev overblog/graphiql-bundle
+Clone the repo
 
 Enable GraphQL endpoint
 
