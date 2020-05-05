@@ -7,7 +7,7 @@ use Overblog\GraphQLBundle\Definition\Argument;
 use Overblog\GraphQLBundle\Definition\Resolver\AliasedInterface;
 use Overblog\GraphQLBundle\Definition\Resolver\ResolverInterface;
 
-class ProductListResolver implements ResolverInterface, AliasedInterface
+class ProductResolver implements ResolverInterface, AliasedInterface
 {
     private $em;
     public function __construct(EntityManager $em)
@@ -17,14 +17,13 @@ class ProductListResolver implements ResolverInterface, AliasedInterface
 
     public function resolve(Argument $argument)
     {
-        $products =  $this->em->getRepository('App:ProductListing')->findAll();
-        return [ 'products' => $products];
+        return $this->em->getRepository('App:ProductListing')->find($argument['id']);
     }
 
     public static function getAliases(): array
     {
         return [
-            'resolve' => 'ProductList'
+            'resolve' => 'Product'
         ];
     }
 }

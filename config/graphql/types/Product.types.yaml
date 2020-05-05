@@ -1,0 +1,26 @@
+
+Product:
+    type: object
+    config:
+        description: " Product detail"
+        fields:
+          id:
+              type: "Int"
+              description: "Product ID"
+
+          title:
+              type: "String"
+              description: "Product title"
+
+          description:
+              type: "String"
+              description: "Product description"
+
+          price:
+              type: "Float"
+              description: "Product price"
+
+
+          is_published:
+              type: "Boolean"
+              description: "Product published details"

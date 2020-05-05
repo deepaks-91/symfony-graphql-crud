@@ -1,0 +1,23 @@
+ProductInput:
+  type: input-object
+  config:
+    fields:
+      id:
+        type: "Int"
+        description: "Product ID"
+        
+      title:
+        type: "String"
+        description: "Product name"
+
+      description:
+        type: "String"
+        description: "Product description"
+
+      price:
+        type: "Float"
+        description: "Product price"
+
+      is_published:
+        type: "Boolean"
+        description: "Product published details"

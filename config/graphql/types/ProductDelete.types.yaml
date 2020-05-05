@@ -1,0 +1,7 @@
+ProductDelete:
+  type: input-object
+  config:
+    fields:
+      id:
+        type: "Int"
+        description: "Product ID"
